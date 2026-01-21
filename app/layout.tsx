@@ -1,4 +1,4 @@
-// app/layout.tsx
+import Providers from "./providers";
 import "./globals.css";
 
 export default function RootLayout({
@@ -9,7 +9,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body>
-        <div className="page-wrapper">{children}</div>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
