@@ -21,27 +21,25 @@ export default function PasswordInput({
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <div className="flex justify-center w-full">
-      <div className="relative w-full max-w-[500px]">
-        <input
-          type={showPassword ? "text" : "password"}
-          {...props}
-          className={cn(InputVariants({ status }), "pr-12", className)}
-        />
+    <div className="relative w-full">
+      <input
+        type={showPassword ? "text" : "password"}
+        {...props}
+        className={cn(InputVariants({ status }), "pr-12", className)}
+      />
 
-        <button
-          type="button"
-          onClick={() => setShowPassword((prev) => !prev)}
-          className="absolute right-3 top-1/2 -translate-y-1/2 p-1 cursor-pointer"
-        >
-          <Image
-            src={showPassword ? EyesOnIcon : EyesOffIcon}
-            alt=""
-            width={24}
-            height={24}
-          />
-        </button>
-      </div>
+      <button
+        type="button"
+        onClick={() => setShowPassword((prev) => !prev)}
+        className="absolute right-3 top-1/2 -translate-y-1/2 p-1 cursor-pointer"
+      >
+        <Image
+          src={showPassword ? EyesOnIcon : EyesOffIcon}
+          alt={showPassword ? "비밀번호 숨기기" : "비밀번호 보기"}
+          width={24}
+          height={24}
+        />
+      </button>
     </div>
   );
 }
