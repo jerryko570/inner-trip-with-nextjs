@@ -1,1 +1,67 @@
-@tailwind utilities;
+
+@layer utilities {
+  /* ===== Titles ===== */
+  .text-h1 {
+    font-size: var(--text-h1);
+    letter-spacing: var(--tracking-h1);
+    font-weight: var(--weight-h1);
+    font-family: var(--font-title);
+  }
+
+  .text-h2 {
+    font-size: var(--text-h2);
+    letter-spacing: var(--tracking-h2);
+    font-weight: var(--weight-h2);
+    font-family: var(--font-title);
+  }
+
+  .text-h3 {
+    font-size: var(--text-h3);
+    letter-spacing: var(--tracking-h3);
+    font-weight: var(--weight-h3);
+    font-family: var(--font-title);
+  }
+
+  .text-h4 {
+    font-size: var(--text-h4);
+    letter-spacing: var(--tracking-h4);
+    font-weight: var(--weight-h4);
+    font-family: var(--font-title);
+  }
+
+  /* ===== Body ===== */
+  .text-body1 {
+    font-size: var(--text-body1);
+    letter-spacing: var(--tracking-body1);
+    font-weight: var(--weight-body1);
+    font-family: var(--font-sans);
+  }
+
+  .text-body2 {
+    font-size: var(--text-body2);
+    letter-spacing: var(--tracking-body2);
+    font-weight: var(--weight-body2);
+    font-family: var(--font-sans);
+  }
+
+  .text-caption {
+    font-size: var(--text-caption);
+    letter-spacing: var(--tracking-caption);
+    font-weight: var(--weight-caption);
+    font-family: var(--font-sans);
+  }
+
+   /* ===== weight ===== */
+  .bold {
+  font-weight: 700;
+  }
+
+  .medium {
+  font-weight: 500;
+  }
+
+  .regular {
+  font-weight: 400;
+  }
+}
+
