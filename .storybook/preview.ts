@@ -1,10 +1,6 @@
 import type { Preview } from "@storybook/nextjs-vite";
 import "../app/globals.css";
 
-if (typeof window !== "undefined" && !window.process) {
-  window.process = { env: {} };
-}
-
 const preview: Preview = {
   parameters: {
     controls: {
