@@ -4,7 +4,7 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 import { VariantProps } from 'class-variance-authority';
 
-import { InputVariants } from '../shared/inputVariants';
+import { InputVariants } from '@/components/shared/inputVariants';
 import { cn } from '@/lib/cn';
 
 import EyesOffIcon from '@/assets/icons/eyes-off.svg';
