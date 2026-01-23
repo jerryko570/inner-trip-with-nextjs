@@ -1,12 +1,14 @@
 import { cva } from "class-variance-authority";
 
 export const ButtonVariants = cva(
-  "w-full h-[54px] text-lg text-white bold rounded-lg cursor-pointer",
+  "w-full h-[54px] text-lg bold rounded-lg cursor-pointer transition-colors",
   {
     variants: {
       variant: {
-        primary: "bg-primary-40 hover:bg-primary-50",
-        disabled: "bg-gray-30",
+        primary: "bg-primary-40 text-white hover:bg-primary-50",
+        disabled: "bg-gray-30 text-white",
+        outline:
+          "border-2 border-primary-40 text-primary-40 bg-transparent hover:bg-primary-5",
       },
       size: {
         md: "h-[54px] px-4 text-lg",
