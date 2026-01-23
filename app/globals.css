@@ -1,36 +1,26 @@
 @import "tailwindcss";
 
 /* ================== 디자인 시스템 스타일 ================== */
-@import "./styles/theme.css";       /* 색상, 폰트 변수 정의 */
-@import "./styles/base.css";        /* Reset, Typography 기본 스타일 */
-@import "./styles/components.css";  /* Button, Input 등 재사용 UI 컴포넌트 */
-/*@import "./styles/utilities.css"; */  /* 헬퍼 유틸리티 클래스 */
-@import "./styles/layout.css";      /* 레이아웃 시스템 */
-
-/* ================== Base 레이어 ================== */
-@layer base {
-  body {
-    @apply text-gray-800 bg-white; /* 기본 글자색: 회색, 배경색: 흰색 */
-  }
-}
+@import "./styles/theme.css";
+@import "./styles/base.css";
+@import "./styles/components.css";
+@import "./styles/utilities.css";
+@import "./styles/layout.css";
 
 /* ================== Components 레이어 ================== */
 @layer components {
-  /* 페이지 전체 래퍼 (최대 너비 + 반응형 여백) */
   .page-wrapper {
-    width: 100%; /* 전체 너비 */
-    max-width: 1200px; /* 최대 너비 1200px */
-    margin: 0 auto; /* 가로 중앙 정렬 */
-    padding-inline: var(--space-mobile); /* 모바일: 좌우 20px 여백 */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-inline: var(--space-mobile);
 
-    /* 태블릿 (768px 이상) */
     @media (min-width: 768px) {
-      padding-inline: var(--space-tablet); /* 좌우 32px 여백 */
+      padding-inline: var(--space-tablet);
     }
 
-    /* 데스크톱 (1024px 이상) */
     @media (min-width: 1024px) {
-      padding-inline: var(--space-desktop); /* 좌우 40px 여백 */
+      padding-inline: var(--space-desktop);
     }
   }
 }
