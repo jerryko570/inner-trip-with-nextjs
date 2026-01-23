@@ -1,7 +1,7 @@
 # 🚀 Journey with Next.js
 
-Next.js 환경설정부터 API 구축, UI 컴포넌트 개발, 배포까지 학습하며 성장하기 위한 프로젝트입니다.  
-개발환경 자동화(Husky, Commitlint, ESLint, Prettier)까지 세팅하여 실무 수준의 워크플로우 기반으로 진행합니다.
+웹 디자인부터 Next.js 환경 구성, API 구축, UI 컴포넌트 개발, 배포까지 전반적인 프론트엔드 개발 사이클을 경험하며 기술 역량을 확장하기 위한 프로젝트입니다.
+Husky, Commitlint, ESLint, Prettier를 통한 개발 환경 자동화를 적용하여, 코드 품질과 협업 효율을 고려한 실무형 워크플로우로 진행하고 있습니다.
 
 ---
 
