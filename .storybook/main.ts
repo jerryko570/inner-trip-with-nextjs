@@ -16,6 +16,11 @@ const config: StorybookConfig = {
 
   staticDirs: ["../public"],
 
+  typescript: {
+    check: false,
+    reactDocgen: false,
+  },
+
   viteFinal: async (config) => {
     config.plugins = config.plugins || [];
     config.plugins.push(svgr());
