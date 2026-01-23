@@ -6,26 +6,26 @@
 }
 
 .modal-title {
-    font-size: var(--text-h3);
-    color: var(--color-black);
+  font-size: var(--text-h3);
+  color: var(--color-black);
 }
 
 .modal-content {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    width: 100%;
-    align-items: center;  
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  align-items: center;
 }
 
 .one-btn {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .two-btn {
-    display: flex;
-    gap:10px;
-    width: 100%; 
+  display: flex;
+  gap: 10px;
+  width: 100%;
 }

@@ -6,76 +6,76 @@
 
 /* 드롭다운 선택 버튼 */
 .dropdown-select {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    width: 100%;
-    padding: 14px 20px;
-    background-color: var(--white);
-    border: 1px solid var(--gray-30);
-    border-radius: 8px;
-    font-size: var(--text-body1);
-    font-weight: var(--weight-body1);
-    cursor: pointer;
-    transition: border-color 0.2s ease;
-    text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  padding: 14px 20px;
+  background-color: var(--white);
+  border: 1px solid var(--gray-30);
+  border-radius: 8px;
+  font-size: var(--text-body1);
+  font-weight: var(--weight-body1);
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+  text-align: left;
 }
 
 /* 선택 버튼 포커스 */
 .dropdown-select:focus {
-    border-color: var(--black);
-    outline: none;
+  border-color: var(--black);
+  outline: none;
 }
 
 /* 선택된 텍스트 */
 .dropdown-select-text {
-    color: var(--gray-60);
+  color: var(--gray-60);
 }
 
 /* 드롭다운 비활성화 상태 */
 .dropdown-select-disabled {
-    background-color: var(--gray-10);
-    border-color: var(--gray-10);
-    color: var(--gray-40);
-    cursor: not-allowed;
-    pointer-events: none;
+  background-color: var(--gray-10);
+  border-color: var(--gray-10);
+  color: var(--gray-40);
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 .dropdown-select-disabled .dropdown-icon {
-    opacity: 0.4;
+  opacity: 0.4;
 }
 
 /* 드롭다운 메뉴 */
 .dropdown-menu {
-    position: absolute;
-    top: calc(100% + 8px);
-    left: 0;
-    width: 100%;
-    background-color: var(--white);
-    border: 1px solid var(--gray-30);
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    list-style: none;
-    padding: 8px 0;
-    margin: 0;
-    z-index: 10;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 100%;
+  background-color: var(--white);
+  border: 1px solid var(--gray-30);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+  z-index: 10;
 }
 
 /* 드롭다운 아이템 */
 .dropdown-items {
-    padding: 12px 20px;
-    font-size: var(--text-body1);
-    cursor: pointer;
-    transition: background-color 0.2s ease;
+  padding: 12px 20px;
+  font-size: var(--text-body1);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
 .dropdown-items:hover {
-    background-color: var(--gray-10);
-    color: var(--black);
+  background-color: var(--gray-10);
+  color: var(--black);
 }
 
 /* 드롭다운 아이콘 */
 .dropdown-icon {
-    transition: transform 0.2s ease;
+  transition: transform 0.2s ease;
 }

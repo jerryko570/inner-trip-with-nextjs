@@ -7,48 +7,48 @@
  * @param {("one-btn" | "two-btn")} [props.type="one-btn"] - 버튼 개수 (기본값: "one-btn")
  */
 
-import Button from "./Button/Button";
-import "./Modal.css";
+import Button from './Button/Button';
+import './Modal.css';
 
 type ModalProps = {
   title: string;
   btnText: string;
   cancelText?: string;
   children?: React.ReactNode;
-  type?: "one-btn" | "two-btn";
+  type?: 'one-btn' | 'two-btn';
 };
 
 export default function Modal({
   title,
   btnText,
-  cancelText = "취소",
+  cancelText = '취소',
   children,
-  type = "one-btn",
+  type = 'one-btn',
 }: ModalProps) {
   return (
-    <div className="modal-dim">
-      <div className="modal-container">
-        <div className="modal-content">
-          <p className="modal-title">{title}</p>
+    <div className='modal-dim'>
+      <div className='modal-container'>
+        <div className='modal-content'>
+          <p className='modal-title'>{title}</p>
           {children}
 
           {/* 버튼 영역 */}
-          {type === "one-btn" ? (
-            <div className="one-btn">
-              <Button variant="primary" size="md" fullWidth>
-                {" "}
-                {btnText}{" "}
+          {type === 'one-btn' ? (
+            <div className='one-btn'>
+              <Button variant='primary' size='md' fullWidth>
+                {' '}
+                {btnText}{' '}
               </Button>
             </div>
           ) : (
-            <div className="two-btn">
-              <Button variant="outline" size="md" className="flex-1">
-                {" "}
-                {cancelText}{" "}
+            <div className='two-btn'>
+              <Button variant='outline' size='md' className='flex-1'>
+                {' '}
+                {cancelText}{' '}
               </Button>
-              <Button variant="primary" size="md" className="flex-1">
-                {" "}
-                {btnText}{" "}
+              <Button variant='primary' size='md' className='flex-1'>
+                {' '}
+                {btnText}{' '}
               </Button>
             </div>
           )}
