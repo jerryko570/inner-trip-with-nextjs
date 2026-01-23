@@ -6,13 +6,13 @@
 
 ## 📁 Tech Stack
 
-| Category | Tools |
-|--------|-------|
-| Framework | Next.js 14 / App Router |
-| Styling | TailwindCSS 4 | Storybook
-| Language | TypeScript |
-| Code Quality | ESLint / Prettier / Husky / Lint-Staged / Commitlint |
-| Version Control | Git + GitHub |
+| Category        | Tools                                                |
+| --------------- | ---------------------------------------------------- | --------- |
+| Framework       | Next.js 14 / App Router                              |
+| Styling         | TailwindCSS 4                                        | Storybook |
+| Language        | TypeScript                                           |
+| Code Quality    | ESLint / Prettier / Husky / Lint-Staged / Commitlint |
+| Version Control | Git + GitHub                                         |
 
 ---
 
@@ -40,6 +40,7 @@ style: 스타일/포맷
 refactor: 리팩토링
 chore: 설정/패키지
 ```
+
 ---
 
 ## 🌍 Start Dev Server

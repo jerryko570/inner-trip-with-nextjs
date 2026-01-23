@@ -7,37 +7,37 @@
   --space-mobile: 20px; /* 모바일 기본 간격 */
   --space-tablet: 32px; /* 태블릿 기본 간격 */
   --space-desktop: 40px; /* 데스크톱 기본 간격 */
-  
+
   /* ================== 배경색 / 글자색 ================== */
   --background: #ffffff; /* 배경색: 흰색 */
   --foreground: #000000; /* 글자색: 검정 */
 
   /* ================== 주요 색상(Primary) ================== */
-  --primary-50: #5900D6; /* hover */
-  --primary-40: #6A00FF; /* main-color */
-  --primary-30: #A86AFF;
-  --primary-20: #DBC1FF;
-  --primary-10: #F2E8FF;
-  --primary-5: #faf6ff; 
+  --primary-50: #5900d6; /* hover */
+  --primary-40: #6a00ff; /* main-color */
+  --primary-30: #a86aff;
+  --primary-20: #dbc1ff;
+  --primary-10: #f2e8ff;
+  --primary-5: #faf6ff;
 
   /* ================== 상태 색상(Status) ================== */
   --blue-20: #0080ff; /* info */
-  --blue-10: #cce6ff; 
-  --red-20: #EA3C12; /*error */
-  --red-10: #ffe2db; 
+  --blue-10: #cce6ff;
+  --red-20: #ea3c12; /*error */
+  --red-10: #ffe2db;
   --green-20: #20a81e; /* success */
-  --green-10: #d4f7d4; 
+  --green-10: #d4f7d4;
   --kakao: #fee500; /* kakao */
 
   /* ================== 회색조(Grayscale) ================== */
-  --black: #000000; 
+  --black: #000000;
   --gray-50: #7d7986;
   --gray-40: #a4a1aa;
   --gray-30: #cbc9cf;
   --gray-20: #e5e4e7;
   --gray-10: #f2f2f3;
-  --gray-5: #fafafa; 
-  --white: #ffffff; 
+  --gray-5: #fafafa;
+  --white: #ffffff;
 
   /* ================== 글자 크기(Font Sizes) ================== */
   --text-h1: 28px; /* 제목 1 */
@@ -67,13 +67,15 @@
   --weight-caption: 400; /* 캡션: Regular */
 
   /* ================== 둥근 모서리(Border Radius) ================== */
-  --radius-sm: 4px; 
-  --radius-md: 6px; 
-  --radius-lg: 8px; 
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
 
   /* ================== 폰트 종류(Font Family) ================== */
-  --font-sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui, sans-serif; /* 기본 폰트 */
-  --font-title: "Montserrat", sans-serif; /* 제목용 폰트 */
+  --font-sans:
+    'Pretendard Variable', -apple-system, BlinkMacSystemFont, system-ui,
+    sans-serif; /* 기본 폰트 */
+  --font-title: 'Montserrat', sans-serif; /* 제목용 폰트 */
 }
 
 /* ================== Tailwind v4 테마 매핑 ================== */
@@ -138,9 +140,9 @@
   --font-title: var(--font-title);
 
   /* 둥근 모서리 매핑 */
-  --radius-sm: var(--radius-sm); 
-  --radius-md: var(--radius-md); 
-  --radius-lg: var(--radius-lg); 
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
 }
 
 /* ================== 다크모드 ================== */

@@ -12,23 +12,17 @@ export default defineConfig([
 
   {
     plugins: {
-      
       'react-hooks': reactHooks,
     },
     rules: {
       'no-unused-vars': 'warn',
       'no-console': 'off',
       'react-hooks/exhaustive-deps': 'warn',
-      'quotes': ['error', 'single'],
+      quotes: ['error', 'single'],
     },
   },
 
   prettier, // prettier와 충돌 방지
 
-  globalIgnores([
-    '.next/**',
-    'out/**',
-    'build/**',
-    'next-env.d.ts',
-  ]),
+  globalIgnores(['.next/**', 'out/**', 'build/**', 'next-env.d.ts']),
 ]);

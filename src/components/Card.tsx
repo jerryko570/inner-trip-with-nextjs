@@ -7,13 +7,13 @@
  * @param {React.ReactNode} [props.children] - 카드에 표시될 추가 내용 (선택사항)
  */
 
-"use client";
+'use client';
 
-import "./Card.css";
-import Image from "next/image";
+import './Card.css';
+import Image from 'next/image';
 
 /* 카드 사이즈 타입 */
-type CardSize = "sm" | "md" | "lg";
+type CardSize = 'sm' | 'md' | 'lg';
 
 /* 카드 컴포넌트 Props 타입 정의 */
 type CardProps = {
@@ -30,29 +30,29 @@ export default function Card({
   img,
   address,
   hourlyPay,
-  size = "lg",
+  size = 'lg',
 }: CardProps) {
   return (
     <div className={`card-container card-${size}`}>
-      <div className="card-img">
+      <div className='card-img'>
         {/* 이미지 영역 */}
         {img ? (
-          <Image src={img} alt={title} fill className="card-img" />
+          <Image src={img} alt={title} fill className='card-img' />
         ) : (
-          <div className="card-img-bg"></div>
+          <div className='card-img-bg'></div>
         )}
       </div>
 
       {/* 타이틀 영역 */}
-      <p className="card-title pt-3">{title}</p>
+      <p className='card-title pt-3'>{title}</p>
 
       {/* 정보 영역 */}
-      <div className="pt-1">
-        <p className="card-info">{address}</p>
+      <div className='pt-1'>
+        <p className='card-info'>{address}</p>
       </div>
 
       {/* 시급 금액 영역 */}
-      <p className="card-hourlyPay pt-1">{hourlyPay.toLocaleString()}원</p>
+      <p className='card-hourlyPay pt-1'>{hourlyPay.toLocaleString()}원</p>
     </div>
   );
 }
