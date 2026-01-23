@@ -6,8 +6,8 @@
  */
 
 import Image from "next/image";
-import PrevArrow from "../assets/arrow-prev.svg";
-import NextArrow from "../assets/arrow-next.svg";
+import PrevArrow from "@/assets/icons/arrow-prev.svg";
+import NextArrow from "@/assets/icons/arrow-next.svg";
 import "./Pagination.css";
 import clsx from "clsx";
 

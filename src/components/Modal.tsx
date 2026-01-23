@@ -7,7 +7,7 @@
  * @param {("one-btn" | "two-btn")} [props.type="one-btn"] - 버튼 개수 (기본값: "one-btn")
  */
 
-import Button from "./Button";
+import Button from "./Button/Button";
 import "./Modal.css";
 
 type ModalProps = {
