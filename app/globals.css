@@ -1,56 +1,11 @@
 @import "tailwindcss";
 
-/* ================== 폰트 설정 ================== */
-@theme {
-  --font-pretendard: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-}
-
-/* ================== 폰트 페이스 정의 ================== */
-@font-face {
-  font-family: 'Pretendard';
-  font-weight: 400;
-  font-style: normal;
-  src: url('/fonts/Pretendard-Regular.subset.woff2') format('woff2');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Pretendard';
-  font-weight: 500;
-  font-style: normal;
-  src: url('/fonts/Pretendard-Medium.subset.woff2') format('woff2');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Pretendard';
-  font-weight: 600;
-  font-style: normal;
-  src: url('/fonts/Pretendard-SemiBold.subset.woff2') format('woff2');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Pretendard';
-  font-weight: 700;
-  font-style: normal;
-  src: url('/fonts/Pretendard-Bold.subset.woff2') format('woff2');
-  font-display: swap;
-}
-
 /* ================== 디자인 시스템 스타일 ================== */
 @import "./styles/theme.css";
 @import "./styles/base.css";
 @import "./styles/components.css";
 @import "./styles/utilities.css";
 @import "./styles/layout.css";
-
-/* ================== Base 레이어 ================== */
-@layer base {
-  body {
-    @apply text-gray-800 bg-white font-pretendard;
-  }
-}
 
 /* ================== Components 레이어 ================== */
 @layer components {
