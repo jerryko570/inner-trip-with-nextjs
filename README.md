@@ -1,4 +1,4 @@
-# 🚀 Journey with Next.js
+# 🚀 inner-trip with Next.js
 
 웹 디자인 설계부터 Next.js 환경 구성, API 연동, UI 컴포넌트 개발, Storybook 기반 컴포넌트 문서화, 그리고 배포까지 프론트엔드 개발 전 과정을 경험하며 기술 역량을 확장하기 위한 프로젝트입니다. Husky, Commitlint, ESLint, Prettier를 활용한 개발 환경 자동화를 적용하여, 코드 품질 관리와 협업 효율을 고려한 실무 중심의 워크플로우로 운영하고 있습니다.
 
