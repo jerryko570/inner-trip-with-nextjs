@@ -1,0 +1,4 @@
+echo ".storybook/" >> .gitignore
+echo "_storybook_backup/" >> .gitignore
+echo "**/*.stories.tsx" >> .gitignore
+echo "**/*.stories.ts" >> .gitignore
