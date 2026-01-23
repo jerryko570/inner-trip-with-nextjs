@@ -1,0 +1,29 @@
+name: Add Vercel Preview URL to PR
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  add-preview-url:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get Vercel Preview URL
+        id: vercel
+        run: |
+          RESPONSE=$(curl -s \
+            -H 'Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}' \
+            'https://api.vercel.com/v6/deployments?limit=1&meta-githubPrId=${{ github.event.pull_request.number }}')
+
+          URL=$(echo $RESPONSE | jq -r '.deployments[0].url')
+          echo 'url='"$URL" >> $GITHUB_OUTPUT
+
+      - name: Update PR description
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            ## 🔗 Preview
+
+            👉 https://${{ steps.vercel.outputs.url }}
