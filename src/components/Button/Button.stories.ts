@@ -7,7 +7,6 @@ const meta: Meta<typeof Button> = {
   argTypes: {
     children: { control: "text", defaultValue: "버튼" },
     variant: { control: "radio", options: ["primary", "outline", "disabled"] },
-    size: { control: "radio", options: ["sm", "md", "lg"] },
   },
 };
 export default meta;
@@ -18,7 +17,6 @@ export const Primary: Story = {
   args: {
     children: "버튼",
     variant: "primary",
-    size: "md",
   },
   parameters: {
     layout: "centered",
