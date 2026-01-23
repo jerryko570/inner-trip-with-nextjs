@@ -1,5 +1,8 @@
-import type { Preview } from "@storybook/nextjs-vite";
-import "../app/globals.css";
+import type { Preview } from "@storybook/react";
+
+if (typeof window !== "undefined" && !window.process) {
+  window.process = { env: {} } as NodeJS.Process;
+}
 
 const preview: Preview = {
   parameters: {
@@ -8,10 +11,6 @@ const preview: Preview = {
         color: /(background|color)$/i,
         date: /Date$/i,
       },
-    },
-    layout: "centered",
-    a11y: {
-      test: "todo",
     },
   },
 };
