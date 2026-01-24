@@ -6,6 +6,7 @@ import { AuthValidation } from '@/lib/validation/authValidation';
 interface SignupFormData {
   email: string;
   password: string;
+  passwordConfirm: string;
 }
 
 export default function useSignup() {
@@ -18,6 +19,8 @@ export default function useSignup() {
   } = useForm<SignupFormData>({
     mode: 'onChange',
   });
+
+  const password = watch('password');
 
   const onSubmit = async (data: SignupFormData) => {
     try {
@@ -37,5 +40,6 @@ export default function useSignup() {
     errors,
     isSubmitting,
     validation: AuthValidation,
+    password,
   };
 }

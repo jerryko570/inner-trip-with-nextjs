@@ -22,4 +22,10 @@ export const AuthValidation = {
       message: '영문과 숫자를 포함해야 합니다',
     },
   },
+
+  passwordConfirm: (password: string) => ({
+    required: '비밀번호를 다시 입력해주세요',
+    validate: (value: string) =>
+      value === password || '비밀번호가 일치하지 않습니다',
+  }),
 };
