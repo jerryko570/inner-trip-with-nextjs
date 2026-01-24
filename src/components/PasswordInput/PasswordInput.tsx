@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { forwardRef, useState } from 'react';
 import { VariantProps } from 'class-variance-authority';
 
 import { InputVariants } from '@/components/shared/inputVariants';
@@ -13,33 +13,35 @@ import EyesOnIcon from '@/assets/icons/eyes-on.svg';
 type PasswordInputProps = React.InputHTMLAttributes<HTMLInputElement> &
   VariantProps<typeof InputVariants>;
 
-export default function PasswordInput({
-  status,
-  className,
-  ...props
-}: PasswordInputProps) {
-  const [showPassword, setShowPassword] = useState(false);
+const PasswordInput = forwardRef<HTMLInputElement, PasswordInputProps>(
+  ({ status, className, ...props }, ref) => {
+    const [showPassword, setShowPassword] = useState(false);
 
-  return (
-    <div className='relative w-full'>
-      <input
-        type={showPassword ? 'text' : 'password'}
-        {...props}
-        className={cn(InputVariants({ status }), 'pr-12', className)}
-      />
-
-      <button
-        type='button'
-        onClick={() => setShowPassword((prev) => !prev)}
-        className='absolute right-3 top-1/2 -translate-y-1/2 p-1 cursor-pointer'
-      >
-        <Image
-          src={showPassword ? EyesOnIcon : EyesOffIcon}
-          alt={showPassword ? '비밀번호 숨기기' : '비밀번호 보기'}
-          width={24}
-          height={24}
+    return (
+      <div className='relative w-full'>
+        <input
+          type={showPassword ? 'text' : 'password'}
+          ref={ref}
+          {...props}
+          className={cn(InputVariants({ status }), 'pr-12', className)}
         />
-      </button>
-    </div>
-  );
-}
+
+        <button
+          type='button'
+          onClick={() => setShowPassword((prev) => !prev)}
+          className='absolute right-3 top-1/2 -translate-y-1/2 p-1 cursor-pointer'
+        >
+          <Image
+            src={showPassword ? EyesOnIcon : EyesOffIcon}
+            alt={showPassword ? '비밀번호 숨기기' : '비밀번호 보기'}
+            width={24}
+            height={24}
+          />
+        </button>
+      </div>
+    );
+  },
+);
+
+PasswordInput.displayName = 'PasswordInput';
+export default PasswordInput;
