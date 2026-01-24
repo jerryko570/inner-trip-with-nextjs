@@ -27,6 +27,9 @@ export default function LoginPage() {
 
       <form onSubmit={handleSubmit} className='w-full max-w-[500px]'>
         <div className='mb-3'>
+          <label htmlFor='email' className='sr-only'>
+            이메일
+          </label>
           <Input
             {...register('email', validation.email)}
             placeholder='이메일을 입력하세요'
@@ -40,6 +43,9 @@ export default function LoginPage() {
         </div>
 
         <div>
+          <label htmlFor='password' className='sr-only'>
+            비밀번호
+          </label>
           <PasswordInput
             {...register('password', validation.password)}
             placeholder='비밀번호를 입력하세요'
