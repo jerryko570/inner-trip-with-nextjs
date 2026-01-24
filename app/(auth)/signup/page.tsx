@@ -10,8 +10,15 @@ import Button from '@/components/Button/Button';
 import { InputErrorText } from '@/components/shared/inputErrorText';
 
 export default function SignupPage() {
-  const { register, handleSubmit, errors, isSubmitting, validation, setValue } =
-    useSignup();
+  const {
+    register,
+    handleSubmit,
+    errors,
+    isSubmitting,
+    validation,
+    setValue,
+    password,
+  } = useSignup();
 
   return (
     <div className='flex flex-col items-center gap-20 pt-20'>
@@ -34,20 +41,33 @@ export default function SignupPage() {
             onClear={() => setValue('email', '')}
           />
           <p className={InputErrorText()}>
-            {''}
             {errors.email?.message || '\u00A0'}
           </p>
         </div>
 
-        <div>
+        <div className='mb-3'>
+          {' '}
           <PasswordInput
             {...register('password', validation.password)}
             placeholder='비밀번호를 입력하세요'
             status={errors.password ? 'error' : 'default'}
           />
           <p className={InputErrorText()}>
-            {''}
             {errors.password?.message || '\u00A0'}
+          </p>
+        </div>
+
+        <div className='mb-3'>
+          <PasswordInput
+            {...register(
+              'passwordConfirm',
+              validation.passwordConfirm(password),
+            )}
+            placeholder='비밀번호를 다시 입력하세요'
+            status={errors.passwordConfirm ? 'error' : 'default'}
+          />
+          <p className={InputErrorText()}>
+            {errors.passwordConfirm?.message || '\u00A0'}
           </p>
         </div>
 
@@ -58,7 +78,7 @@ export default function SignupPage() {
         </div>
 
         <p className='flex items-center justify-center pt-4'>
-          <span className='text-body1'>회원이 아니신가요?</span>
+          <span className='text-body1'>회원이신가요?</span>
           <Link href='/login' className='pl-3 text-body1 bold text-blue-20'>
             로그인하기
           </Link>
