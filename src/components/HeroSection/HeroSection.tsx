@@ -24,19 +24,11 @@ export default function HeroSection() {
           마음을 정리하는 작은 여행
         </h1>
         <div className='flex gap-3'>
-          <Button
-            variant='primaryWhite'
-            size='sm'
-            className='md:h-[54px] md:text-lg md:px-4 w-28 md:w-32'
-          >
+          <Button variant='primaryWhite' size='smToMd' fullWidth={false}>
             기록하기
           </Button>
-          <Button
-            variant='outlineWhite'
-            size='sm'
-            className='md:h-[54px] md:text-lg md:px-4 w-28 md:w-32'
-          >
-            3분 명상
+          <Button variant='outlineWhite' size='smToMd' fullWidth={false}>
+            3분명상
           </Button>
         </div>
       </div>
