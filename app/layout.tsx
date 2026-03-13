@@ -37,11 +37,7 @@ export default function RootLayout({
   return (
     <html lang='ko' className={pretendard.variable}>
       <body className={pretendard.className}>
-        <Providers>
-          <div className='mx-auto max-w-[1200px] px-4 md:px-6 lg:px-0'>
-            {children}
-          </div>
-        </Providers>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

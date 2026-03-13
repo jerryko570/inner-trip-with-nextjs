@@ -16,6 +16,7 @@ export const ButtonVariants = cva(
       size: {
         md: 'h-[54px] px-4 text-lg',
         sm: 'h-[40px] px-3 text-sm',
+        smToMd: 'h-[40px] px-10 text-sm md:h-[54px] md:px-10 md:text-lg',
       },
       fullWidth: {
         true: 'w-full',
