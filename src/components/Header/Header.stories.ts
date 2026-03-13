@@ -24,16 +24,6 @@ export const Default: Story = {
   },
 };
 
-export const Transparent: Story = {
-  args: {
-    variant: 'default',
-    sticky: false,
-  },
-  parameters: {
-    layout: 'fullscreen',
-  },
-};
-
 export const Sticky: Story = {
   args: {
     variant: 'default',

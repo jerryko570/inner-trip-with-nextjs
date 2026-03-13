@@ -15,7 +15,6 @@ import { NAV_LINKS } from '@/constant/navigationData';
 interface HeaderProps extends VariantProps<typeof HeaderVariants> {
   navLinks?: NavLink[];
   onLogoClick?: () => void;
-  onLoginClick?: () => void;
 }
 
 export default function Header({
