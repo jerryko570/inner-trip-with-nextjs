@@ -29,10 +29,8 @@ export async function signup(formData: SignupFormData) {
     const data = await response.json();
 
     if (!response.ok) {
-      // 응답은 왔지만 실패한 경우 (예: 이미 가입된 이메일)
-      // 서버가 보낸 영어 에러 메시지를 한글로 변환 후 에러를 던 catch로 이동
       const message = getSupabaseErrorMessage(
-        data.error_description || data.message,
+        data.error_description || data.message || data.msg,
       );
       throw new Error(message);
     }

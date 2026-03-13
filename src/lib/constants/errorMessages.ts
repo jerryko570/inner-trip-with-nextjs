@@ -12,6 +12,10 @@ const SUPABASE_ERROR_MESSAGES: ErrorMessages = {
   'Unable to validate email address: invalid format':
     '올바른 이메일 형식이 아닙니다.',
   'Signup requires a valid password': '유효한 비밀번호를 입력해주세요.',
+  'email rate limit exceeded':
+    '이메일 전송 한도를 초과했습니다. 잠시 후 다시 시도해주세요.',
+  over_email_send_rate_limit:
+    '이메일 전송 한도를 초과했습니다. 잠시 후 다시 시도해주세요.',
 
   // 로그인 에러
   'Invalid login credentials': '이메일 또는 비밀번호가 잘못되었습니다.',
