@@ -13,7 +13,7 @@ export default function HomePage() {
         onLogoClick={() => router.push('/')}
         onLoginClick={() => router.push('/login')}
       />
-      *<HeroSection />
+      <HeroSection />
     </>
   );
 }
