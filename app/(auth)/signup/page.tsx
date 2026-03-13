@@ -21,7 +21,7 @@ export default function SignupPage() {
   } = useSignup();
 
   return (
-    <div className='flex flex-col items-center gap-20 pt-20'>
+    <div className='flex flex-col items-center gap-20'>
       <Link href='/'>
         <Image
           src='/logo.svg'

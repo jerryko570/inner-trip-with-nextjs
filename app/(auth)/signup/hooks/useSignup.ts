@@ -12,7 +12,6 @@ import { useRouter } from 'next/navigation';
 import { useMutation } from '@tanstack/react-query';
 
 import { signup } from '@/lib/api/auth/signup';
-import { getSupabaseErrorMessage } from '@/lib/constants/errorMessages';
 import { AuthValidation } from '@/lib/validation/authValidation';
 import type { SignupFormData } from '@/lib/types/auth';
 
@@ -43,8 +42,7 @@ export default function useSignup() {
 
     onError: (error: Error) => {
       console.error('회원가입 실패:', error.message);
-      const message = getSupabaseErrorMessage(error.message);
-      alert(message);
+      alert(error.message);
     },
   });
 
